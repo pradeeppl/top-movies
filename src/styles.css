@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Prata', serif;
+}
+a, a:hover {
+    color: #343a40;
+    text-decoration: none;
+}
+.navbar {
+    -webkit-box-shadow: 0 0 28px rgba(0,0,0,.07);
+    -moz-box-shadow: 0 0 28px rgba(0,0,0,.07);
+    box-shadow: 0 0 28px rgba(0,0,0,.07);
+}
+.navbar-brand img {
+    max-height: 40px;
+    width: auto;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.content-wrapper {
+    padding-top: 110px;
+    padding-bottom: 60px;
+}
+.content-wrapper .col-md-4 {
+    margin-bottom: 50px;
+}
+.card {
+    height: 100%;
+    border: none;
+    box-shadow: 0 0 60px rgba(0,0,0,.11);
+}
+.card img {
+    object-fit: cover;
+}
+.card h6 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #505050;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0;
+}
+.card-title {
+    font-family: 'Prata', serif;
+    font-size: 19px;
+    line-height: 31px;
+    text-transform: none;
+    margin-top: 9px;
+    margin-bottom: 8px;
+}
+.card-body p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 25px;
+    text-transform: none;
+    color: #666666;
+}
+.relaseDate {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999999;
+    font-family: Poppins;
+    font-weight: 300;
+}
+.starBg,
+.ratingStar {
+    background: url('src/assets/images/star.jpg') no-repeat 0 0;
+    width: 68px;
+    height: 12px;
+    font-size: 0;
+    line-height: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.ratingStar {
+    background: url('src/assets/images/star.jpg') no-repeat 0 -12px;
+    width: 100%;
+    height: 12px;
+    display: block;    
+    margin-top: 0px;
+}
+footer {
+    background-color: #010101;
+}
+footer p {
+    color: #888888;
+    font-size: 12px;
+    text-transform: none;
+    font-family: Poppins;
+    font-weight: 400;
+}

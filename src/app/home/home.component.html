@@ -1,0 +1,58 @@
+<header>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+      <div class="container">
+          <a class="navbar-brand" routerLink=""><img src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"></a>
+          <button class="navbar-toggler customToggler" data-target="#collapsibleNavbar" data-toggle="collapse" type="button">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" routerLink="">Home</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+  </header>
+  <section class="content-wrapper">
+    <div class="container">
+      <div class="movieResults" 
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()">
+        <div class="row">
+          <div class="col-md-4 col-sm-6" *ngFor="let movie of movies">
+            <div class="card" #cardWidth>
+              <img *ngIf="movie.poster_path" [height]="cardWidth.offsetWidth / 1.5" alt="" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}">
+              <img *ngIf="!movie.poster_path" [height]="cardWidth.offsetWidth / 1.5" alt="" src="https://via.placeholder.com/500x500?text=No+Image">
+              <div class="card-body">
+                <h6>Rating: <span class="starBg"><span class="ratingStar" style="width: {{movie.vote_average * 10}}%"></span></span> ({{movie.vote_average / 2}}/5)</h6>
+                <h5 class="card-title">{{movie.title}}</h5>
+                <p>{{(movie.overview.length>100)? (movie.overview | slice:0:100)+'..':(movie.overview)}}</p>
+                <span class="relaseDate">{{movie.release_date | date:'dd MMMM yyyy'}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pb-5">
+        <div class="col-12">
+          <ngx-spinner
+          bdOpacity = 0.9
+          bdColor = ""
+          size = "default"
+          color = "#dc1a28"
+          type = "ball-circus"
+          [fullScreen] = "false">
+        </ngx-spinner>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="py-3">
+    <div class="container">
+      <p class="m-0 text-center">Copyright © 2020 Netflix</p>
+    </div>
+  </footer>
